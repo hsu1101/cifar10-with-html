@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <link href="static/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <center>
+            <div class='cont'>
+                
+            
+            {% if data[0] > 0.50 %}
+            <h1>I think it's a airplane.</h1>
+            {% elif data[1] > 0.50 %}
+            <h1>I think it's an automobile.</h1>
+            {% elif data[2] > 0.50 %}
+            <h1>I think it's a bird.</h1>
+            {% elif data[3] > 0.50 %}
+            <h1>I think it's a cat.</h1>
+            {% elif data[4] > 0.50 %}
+            <h1>I think it's a deer.</h1>
+            {% elif data[5] > 0.50 %}
+            <h1>I think it's a dog.</h1>
+            {% elif data[6] > 0.50 %}
+            <h1>I think it's a frog.</h1>
+            {% elif data[7] > 0.50 %}
+            <h1>I think it's a horse.</h1>
+            {% elif data[8] > 0.50 %}
+            <h1>I think it's a ship.</h1>
+            {% elif data[9] > 0.50 %}
+            <h1>I think it's a truck.</h1>
+
+            {%else%}
+            <h1> I don't think it's a cifar-10 dataset. </h1>
+            
+            {%endif%}
+
+        </div>
+
+            <img src="{{url_for('load_img')}}" alt='img'>
+            <a href="/" class='btn'>go back</a>
+
+        </center>
+        
+    </body>
+</html>
